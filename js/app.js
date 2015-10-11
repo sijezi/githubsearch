@@ -1,38 +1,42 @@
 
 
-function clickMe() {
-	document.getElementById("form").submit();
-function requestListener() {
-	var req = JSON.parse(this.responseText);
-	console.log(req.id); 
-}
+function init() {
+	document.onkeydown = function() {
+		if (event.keyCode === '13') {
+			document.getElementById("user").submit();
+		}
+	}
+
+	// fire-up the ajax call
+	function xhr() {
+		function requestListener() {
+			var req = JSON.parse(this.responseText);
+			console.log(req.avatar_url); 
+			document.getElementById("avatar").src = req.avatar_url;
+		}
 
 
-// grab user input
-var userid = document.getElementById('user').value;
+		// grab user input
+		var userid = document.getElementById('user').value;
 
-// make new xmlhttp object
-var xmlhttp = new XMLHttpRequest();
+		// make new xmlhttp object
+		var xmlhttp = new XMLHttpRequest();
 
-// request url
-var url = 'https://api.github.com/users/'+userid;
+		// request url
+		var url = 'https://api.github.com/users/'+userid;
 
-// add event listener
-xmlhttp.addEventListener('load', requestListener);
-
-
+		// add event listener
+		xmlhttp.addEventListener('load', requestListener);
 
 
-// open the request
-xmlhttp.open('GET', url, true);
-
-// send
-xmlhttp.send();
-
-var template = Handlebars.compile('<div>Hello {{name}}</div>');
-var html = document.getElementById('app');
-html.innerHTML = template({name: userid});
 
 
-	
+		// open the request
+		xmlhttp.open('GET', url, true);
+
+		// send
+		xmlhttp.send();
+	}
+
+	xhr();
 }
