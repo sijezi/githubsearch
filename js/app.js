@@ -1,4 +1,7 @@
 
+
+function clickMe() {
+	document.getElementById("form").submit();
 function requestListener() {
 	var req = JSON.parse(this.responseText);
 	console.log(req.id); 
@@ -30,6 +33,6 @@ var template = Handlebars.compile('<div>Hello {{name}}</div>');
 var html = document.getElementById('app');
 html.innerHTML = template({name: userid});
 
-function clickMe() {
-	document.getElementById("form").submit();
+
+	
 }
