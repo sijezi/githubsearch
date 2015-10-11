@@ -1,0 +1,20 @@
+#wrapper {
+	width:960px;
+    height:480px;
+    margin:0 auto;
+    margin-top: 17px;
+    background:#EFEFEF;
+}
+
+.page-header {
+	width: 50%;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-bottom:0;
+    color: black;
+}
+
+.red {
+	color: white;
+	text-transform: uppercase;
+}

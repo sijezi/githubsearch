@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>github search api</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>	
-	<form id="form" action="#">
-		<input id="user"> </input>
-		<input type="button" onclick="init()" value="Submit">
-	</form>
-	<h1 id='app'></h1>
-	<h3>User Avatar</h3>
+<body>
+	<div class="container-fluid">	
+		
+		<div class="page-header text-center alert alert-info">
+  			<h1>Github User Search API <small class="red">Avatars</small></h1>
+		</div>
+		<div id="wrapper">
+			
+		<div class="row">
+	  <div class="col-md-4">
+				<form id="form" action="#" class="form-inline">
+					<input id="user" placeholder="github username" class="form-control"> </input>
+					<input type="button" onclick="init()" value="GET" class="btn btn-primary" >
 
-	<img src="" alt="" id="avatar">
-	
+				</form>
+	  </div>
+</div>
+			<h1 id='app'></h1>
+			<h3>User Avatar</h3>
+			<img src="" alt="" id="avatar" class="img-responsive">
+		</div>
+	</div>
 	<script src="js/app.js"></script>
 	
 </body>
