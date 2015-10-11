@@ -3,12 +3,17 @@
 <head>
 	<title> Github-search</title>
 	<title>github search api</title>
-	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/handlebars.js"></script>
 </head>
-<body>
-	<input id="user" value="wehelie"> </input>
+<body>	
+	<form id="form">
+		<input id="user"> </input>
+		<input type="button" onclick="clickMe()" value="Submit">
+	</form>
+	<h1 id='app'></h1>
+	
 	<script src="js/app.js"></script>
-
+	
 </body>
 </html>
