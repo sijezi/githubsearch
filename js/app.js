@@ -1,12 +1,12 @@
-
-
+$(document).ready(function() {
+	$('form input').keydown(function (e) {
+	    if (e.keyCode == 13) {
+	        return true;
+	    }
+	});
+})
 function init() {
-	document.onkeydown = function() {
-		if (event.keyCode === '13') {
-			document.getElementById("user").submit();
-		}
-	}
-
+	
 	// fire-up the ajax call
 	function xhr() {
 		function requestListener() {
